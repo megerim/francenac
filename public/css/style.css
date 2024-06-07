@@ -8348,3 +8348,106 @@ body::-webkit-scrollbar-thumb {
                      var(--sb-track-color);
   }
 }
+
+
+.services-box .item{
+  display: inline-block;
+  position: relative;
+  width: calc(100% / 5 + 1px);
+  height: 50vh;
+  overflow: hidden;
+  background: #000;
+  margin: 0 -2px;
+  transition: all .3s linear
+}
+.services-box .item .image{
+  position: relative;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  background: #ffffff;
+  transition: all .3s linear
+}
+.services-box .item .image img{
+  width: auto;
+  height: 100%;
+  -moz-transform: translate(-50%,-50%);
+  transform: translate(-50%,-50%);
+  position: absolute;
+  object-fit: cover;
+  left: 50%;
+  top: 50%;
+  z-index: 1;
+  opacity: .2;
+  -webkit-filter: invert(1);
+  transition: all .3s linear
+}
+
+.services-box .item.color-1 .content .icon svg path{fill: #fe5a0e!important}
+.services-box .item.color-1:hover .image{background:#fe5a0e }
+.services-box .item.color-2 .content .icon svg path{fill: #FF6B6B!important}
+.services-box .item.color-2:hover .image{background: #fe5a0e}
+.services-box .item.color-3 .content .icon svg path{fill: #fe5a0e!important}
+.services-box .item.color-3:hover .image{background: #fe5a0e}
+.services-box .item.color-4 .content .icon svg path{fill: #fe5a0e!important}
+.services-box .item.color-4:hover .image{background: #fe5a0e}
+
+.services-box .item:hover .image img{
+  -webkit-filter: invert(0);
+  opacity: .2;
+  height: 130%;
+  transition: all .3s linear
+}
+.services-box .item .content{
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 2;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  writing-mode: tb-rl;
+  transition: all .1s ease;
+  transition: all .3s linear
+}
+.services-box .item:hover .content{letter-spacing: .1em}
+.services-box .item .content .title{
+  color: #fe5a0e;
+  font-weight: 700;
+  line-height: 2;
+  font-size: 4em;
+  margin-right: 15px;
+  transition: all .3s linear
+}
+.services-box .item:hover .content .title{color: rgba(255,255,255,1)}
+.services-box .item .content .icon{
+  display: block;
+  position: absolute;
+  top: 30px;
+  left: 30px
+}
+.services-box .item .content .icon svg{
+  display: inline-block;
+  width: 70px
+}
+.services-box .item .content .icon svg path{fill: rgba(255,255,255,.3)!important }
+.services-box .item:hover .content .icon svg path{fill: rgba(255,255,255,.9)!important}
+
+.services-box:hover .item .image img{opacity: .1}
+
+
+
+@media (min-width: 768px) {
+ 
+  
+  .align-items-end{
+    margin-right: 60px;
+  }
+  .align-items-start{
+    margin-left: 60px;
+  }
+}
+
+
+
+
