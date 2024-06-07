@@ -8379,7 +8379,6 @@ body::-webkit-scrollbar-thumb {
   top: 50%;
   z-index: 1;
   opacity: .2;
-  -webkit-filter: invert(1);
   transition: all .3s linear
 }
 
