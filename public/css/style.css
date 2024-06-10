@@ -8349,3 +8349,44 @@ body::-webkit-scrollbar-thumb {
   }
 }
 
+
+.box {
+  width: 18%;
+  height: 200px;
+  background-color: #eee;
+  margin-right: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+.box:last-child {
+  margin-right: 0;
+}
+
+.box-img {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 150px; /* Adjust as necessary */
+  height: auto;
+  padding-bottom: 5px;
+}
+.box-img2 {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 50px; /* Adjust as necessary */
+  height: auto;
+  padding-bottom: 5px;
+
+}
+
+.box-title {
+  font-size: 1rem;
+  position: absolute;
+  right: 0;
+  top: 0;
+  margin: 10px; /* Adjust as necessary */
+}
