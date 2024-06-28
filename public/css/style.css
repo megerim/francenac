@@ -1101,7 +1101,7 @@ select {
 }
 
 .bg-theme2 {
-  background-color: #f5570e !important;
+  background-color: #FF0000 !important;
 }
 
 .bg-img {
@@ -6796,7 +6796,7 @@ textarea.form-control {
 
 .contact-panel .contact__number i {
   color: #ffffff;
-  border-color: rgba(255, 255, 255, 0.25);
+  border-color: rgba(255, 255, 255, 0.45);
 }
 
 .contact-panel .contact__number a {
@@ -6835,7 +6835,7 @@ textarea.form-control {
 }
 
 .contact-layout2 .contact__number i {
-  border-color: rgba(255, 255, 255, 0.25);
+  border-color: rgba(255, 255, 255, 0.45);
 }
 
 .contact-layout3 .contact-panel .contact__panel-form {
@@ -7815,18 +7815,33 @@ textarea.form-control {
 }
 .info-slider-wrapper {
   display: flex;
-  flex-direction: column;
-  align-items: flex-end;
+  flex-direction: column; /* Default to column for small screens */
+  align-items: flex-start;
+  width: 100%;
+}
+
+@media (min-width: 768px) {
+  .info-slider-wrapper {
+    flex-direction: row; /* Change to row for medium and larger screens */
+    justify-content: space-between; /* Ensure space between the boxes */
+  }
 }
 
 .info__slider {
   background-color: #FF0000;
   border-radius: 6px;
-  width: 250px;
+  width: 100%; /* Full width on small screens */
   height: 250px;
   border: #ffffff 5px solid;
   margin-bottom: 20px;
   position: relative;
+}
+
+@media (min-width: 768px) {
+  .info__slider {
+    width: 48%; /* Adjust width to fit two boxes side by side on medium and larger screens */
+    margin-bottom: 0; /* Remove bottom margin for larger screens */
+  }
 }
 
 .info__slider-image {
@@ -7857,9 +7872,14 @@ textarea.form-control {
   opacity: 1;
 }
 
-.opacity-14{
+.opacity-14 {
   opacity: 0.14;
 }
+
+
+
+
+
 
 .info__slider .info__slider-icon {
   color: #1b1a1a;
@@ -8315,11 +8335,6 @@ textarea.form-control {
 
 
 
-.brand-logo {
-  max-height: 50px;
-  margin: 0 20px;
-}
-
 
 body {
   --sb-track-color: #232E33;
@@ -8345,11 +8360,31 @@ body::-webkit-scrollbar-thumb {
 @supports not selector(::-webkit-scrollbar) {
   body {
     scrollbar-color: var(--sb-thumb-color)
-                     var(--sb-track-color);
+    var(--sb-track-color);
   }
 }
 
+/* Custom class for adjusting the logo columns */
+.custom-logo-col {
+  flex: 0 0 auto;
+  width: auto;
+  margin-right: 10px; /* Adjust this margin as needed to control spacing */
+}
 
+.custom-logo-col:last-child {
+  margin-right: 0; /* Remove margin from the last logo */
+}
+
+/* Brand Logo Styles */
+.brand-logo {
+  max-height: 50px;
+  width: auto;
+  object-fit: contain;
+  margin: 0 5px; /* Reduce the margin to bring logos closer */
+  padding: 5px; /* Add padding for better spacing */
+}
+
+/* Box Styles */
 .box {
   width: 18%;
   height: 165px;
@@ -8372,7 +8407,9 @@ body::-webkit-scrollbar-thumb {
   width: 150px; /* Adjust as necessary */
   height: auto;
   padding-bottom: 5px;
+  margin-left: 5px;
 }
+
 .box-img2 {
   position: absolute;
   left: 0;
@@ -8380,7 +8417,7 @@ body::-webkit-scrollbar-thumb {
   width: 50px; /* Adjust as necessary */
   height: auto;
   padding-bottom: 5px;
-
+  margin-left: 5px;
 }
 
 .box-title {
@@ -8390,4 +8427,3 @@ body::-webkit-scrollbar-thumb {
   top: 0;
   margin: 10px; /* Adjust as necessary */
 }
-
